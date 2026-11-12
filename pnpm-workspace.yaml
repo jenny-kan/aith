@@ -1,0 +1,10 @@
+# pnpm 10+ reads its settings from this file (not package.json).
+# Only these dependencies are allowed to run install scripts — everything
+# else installs with scripts blocked by default (supply-chain hardening).
+# Prisma needs its scripts to generate the client and fetch query engines.
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  prisma: true
+  esbuild: true
+  better-sqlite3: true
